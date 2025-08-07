@@ -1,12 +1,15 @@
-/* style.css */
+/* css/style.css */
 
-/* 1. 載入 Google Font：Playfair Display */
+/* 載入 Google 字體 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-body {
+html, body {
   margin: 0;
   height: 100vh;
-  background-color: #000033;     /* 深藍背景 */
+}
+
+body {
+  background-color: #000033;    /* 深藍背景 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,22 +17,22 @@ body {
 
 .card {
   text-align: center;
-  width: 50vw;                    /* 約佔版面 40~50% */
+  width: 50vw;                   /* 佔螢幕寬度 40~50% */
 }
 
 .card h1 {
   margin: 0;
-  color: #FFD54F;                 /* 較淺金色 */
   font-family: 'Playfair Display', serif;
-  font-size: 8rem;                /* 可依需求微調 */
+  font-size: 8rem;
+  color: #FFEB3B;                /* 較淺的金色 */
   letter-spacing: 0.5rem;
 }
 
 .card h2 {
   margin: 0;
-  color: #FFD54F;
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
+  color: #FFEB3B;
   letter-spacing: 0.2rem;
   opacity: 0.9;
 }
