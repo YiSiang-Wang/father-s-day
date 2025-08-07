@@ -3,21 +3,14 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>翻頁示範</title>
+  <title>Father’s Day Cover</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-  <div class="page" id="page">
-    <div class="side front"></div>
-    <div class="side back">
-      <div class="ellipse"></div>
-    </div>
-  </div>
-
+<body class="cover-page">
   <script>
-    // 5 秒後加入 flipped class，觸發翻頁動畫
+    // 5 秒後自動跳到第二頁
     setTimeout(() => {
-      document.getElementById('page').classList.add('flipped');
+      window.location.href = 'page2.html';
     }, 5000);
   </script>
 </body>
