@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Father’s Day Message</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* 只對非第一、非最後段落套用首行縮排 */
+    .text-container p {
+      margin-top: 1rem;   /* 保持段落間距 */
+    }
+    .text-container p:not(:first-child):not(:last-child) {
+      text-indent: 2ch;   /* 首行縮排兩個字寬 */
+    }
+  </style>
 </head>
 <body class="second-page">
   <div class="text-container">
