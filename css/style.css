@@ -1,24 +1,33 @@
 /* css/style.css */
 
-/* 背景圖 */
+/* Reset and full-screen container */
 html, body {
   margin: 0;
-  height: 100vh;
-  /* 將背景設定為背景圖 */
-  background-image: url('../img/background.png');
-  background-size: cover;           /* 圖片覆蓋整個畫面 */
-  background-position: center;      /* 圖片置中 */
-  background-repeat: no-repeat;     /* 不重複 */
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 第一頁：封面圖 */
+.cover-page {
+  background: url('../img/background.png') 
+              center center / cover no-repeat;
+}
+
+/* 第二頁：背景圖 + 置中彈性布局 */
+.second-page {
+  background: url('../img/background.jpg') 
+              center center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 封面圖 */
-.cover {
-  display: block;
-  width: 60vw;                      /* 佔螢幕寬度 60% */
-  max-width: 600px;                 /* 最大寬度限制，可調 */
-  height: auto;
-  margin: auto;
+/* 白色橢圓卡片 */
+.ellipse-card {
+  width: 60vw;           /* 佔螢幕寬度 60% */
+  height: 35vh;          /* 依需求可微調 */
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 50%;    /* 產生橢圓形 */
 }
