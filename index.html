@@ -6,12 +6,26 @@
   <title>Father’s Day Cover</title>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="cover-page">
+<body>
+  <div class="page" id="page">
+    <!-- 正面 -->
+    <div class="side front"></div>
+    <!-- 背面 (翻頁時可先看到此背景，接著跳轉) -->
+    <div class="side back"></div>
+  </div>
+
   <script>
-    // 5 秒後自動跳到第二頁
-    setTimeout(() => {
-      window.location.href = 'page2.html';
-    }, 5000);
+    const page = document.getElementById('page');
+    // 點擊任一處就加上 .flipped，觸發翻頁動畫
+    page.addEventListener('click', () => {
+      page.classList.add('flipped');
+    });
+    // 動畫結束後導向第二頁
+    page.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'transform' && page.classList.contains('flipped')) {
+        window.location.href = 'page2.html';
+      }
+    });
   </script>
 </body>
 </html>

@@ -1,30 +1,56 @@
-/* Reset & 全螢幕 */
+/* Reset & 全螢幕透視 */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  perspective: 1200px;            /* 3D 透視 */
+  overflow: hidden;
 }
 
-/* 第一頁：封面 */
-.cover-page {
+/* 翻頁容器 */
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+.page.flipped {
+  transform: rotateY(180deg);
+}
+
+/* 兩面共用 */
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;    /* 隱藏背面 */
+  background-size: cover;
+  background-position: center;
+}
+
+/* 第一面：封面 */
+.front {
   background: url('../img/background.png') center/cover no-repeat;
 }
 
-/* 第二頁：背景 + 置中布局 */
-.second-page {
+/* 第二面：背景 */
+.back {
   background: url('../img/background.jpg') center/cover no-repeat;
+}
+
+/* 第二頁內容用 (page2.html) */
+.second-page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 白色橢圓卡片（約佔 80% 畫面） */
+/* 橢圓卡片 (page2.html) */
 .ellipse-card {
-  width: 80vw;
-  max-width: 960px;
-  height: 80vh;
-  max-height: 720px;
+  width: 90vw;
+  height: 90vh;
   background-color: rgba(255,255,255,0.95);
   border-radius: 50%;
   padding: 2rem;
