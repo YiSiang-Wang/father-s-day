@@ -61,7 +61,7 @@ html, body {
   background: transparent;     /* 透明背景 */
   padding: 1rem;
   box-sizing: border-box;
-  text-align: center;          /* 文字置中 */
+  text-align: left;          /* 文字置中 */
   line-height: 1.6;
   font-size: 1rem;
   color: #333;
