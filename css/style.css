@@ -1,20 +1,24 @@
 /* css/style.css */
 
-/* Off-white 背景 */
+/* 背景圖 */
 html, body {
   margin: 0;
   height: 100vh;
-  background-color: #F5F5DC;    /* 米白色 */
+  /* 將背景設定為背景圖 */
+  background-image: url('../img/background.jpg');
+  background-size: cover;           /* 圖片覆蓋整個畫面 */
+  background-position: center;      /* 圖片置中 */
+  background-repeat: no-repeat;     /* 不重複 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 置中且寬度佔 60% */
+/* 封面圖 */
 .cover {
   display: block;
-  width: 60vw;                  /* 佔版面 60% */
-  max-width: 600px;             /* 防止過大，可自行調整 */
+  width: 60vw;                      /* 佔螢幕寬度 60% */
+  max-width: 600px;                 /* 最大寬度限制，可調 */
   height: auto;
   margin: auto;
 }
