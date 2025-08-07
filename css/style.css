@@ -1,14 +1,14 @@
-/* Reset & 全螢幕透視 */
+/* Reset & 全螢幕 */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  perspective: 1200px;            /* 3D 透視 */
   overflow: hidden;
+  perspective: 1200px;       /* 只有 index.html 用到 3D 翻頁 */
 }
 
-/* 翻頁容器 */
+/* ---------- 共用 side 樣式 (index.html) ---------- */
 .page {
   width: 100%;
   height: 100%;
@@ -19,35 +19,37 @@ html, body {
 .page.flipped {
   transform: rotateY(180deg);
 }
-
-/* 兩面共用 */
 .side {
   position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;    /* 隱藏背面 */
+  backface-visibility: hidden;
   background-size: cover;
   background-position: center;
 }
-
-/* 第一面：封面 */
+/* 封面圖 */
 .front {
-  background: url('../img/background.png') center/cover no-repeat;
+  background-image: url('../img/background.png');
 }
-
-/* 第二面：背景 */
+/* 翻過來要看到的「第二面背景」 */
 .back {
-  background: url('../img/background.jpg') center/cover no-repeat;
+  background-image: url('../img/background.jpg');
 }
 
-/* 第二頁內容用 (page2.html) */
+/* ---------- 第二頁 (page2.html) ---------- */
 .second-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/background.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 橢圓卡片 (page2.html) */
+/* 半透明白色橢圓，佔螢幕 90% */
 .ellipse-card {
   width: 90vw;
   height: 90vh;

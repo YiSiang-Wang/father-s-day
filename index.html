@@ -8,20 +8,20 @@
 </head>
 <body>
   <div class="page" id="page">
-    <!-- 正面 -->
+    <!-- 正面：封面圖，一直顯示到你點擊 -->
     <div class="side front"></div>
-    <!-- 背面 (翻頁時可先看到此背景，接著跳轉) -->
+    <!-- 背面：第二面背景，隱藏於背後 -->
     <div class="side back"></div>
   </div>
 
   <script>
     const page = document.getElementById('page');
-    // 點擊任一處就加上 .flipped，觸發翻頁動畫
+    // 點擊任何地方才觸發 3D 翻頁
     page.addEventListener('click', () => {
       page.classList.add('flipped');
     });
-    // 動畫結束後導向第二頁
-    page.addEventListener('transitionend', (e) => {
+    // 翻頁動畫跑完後，才跳到 page2.html
+    page.addEventListener('transitionend', e => {
       if (e.propertyName === 'transform' && page.classList.contains('flipped')) {
         window.location.href = 'page2.html';
       }
