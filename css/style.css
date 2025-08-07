@@ -1,0 +1,25 @@
+/* style.css */
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #4B0082;       /* 靛藍底 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFD700;                  /* 金色字 */
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;                 /* 大標題尺寸 */
+  margin: 0;
+}
+
+h2 {
+  font-size: 3rem;                 /* 副標題尺寸 */
+  margin: 0;
+  opacity: 0.9;
+}
