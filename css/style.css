@@ -1,33 +1,54 @@
-/* css/style.css */
-
-/* Reset and full-screen container */
+/* ---------- 全域 ---------- */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  perspective: 1200px;         /* 3D 透視 */
+  overflow: hidden;
 }
 
-/* 第一頁：封面圖 */
-.cover-page {
-  background: url('../img/background.png') 
-              center center / cover no-repeat;
+/* ---------- 翻頁容器 ---------- */
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
 }
 
-/* 第二頁：背景圖 + 置中彈性布局 */
-.second-page {
-  background: url('../img/background.jpg') 
-              center center / cover no-repeat;
+/* 加上 .flipped 就翻 180° */
+.page.flipped {
+  transform: rotateY(180deg);
+}
+
+/* ---------- 兩面共用樣式 ---------- */
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* 隱藏背面 */
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- 第一面：封面 ---------- */
+.front {
+  background-image: url('../img/background.png');
+}
+
+/* ---------- 第二面：內容 ---------- */
+.back {
+  background-image: url('../img/background.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* 白色橢圓卡片 */
-.ellipse-card {
-  width: 60vw;           /* 佔螢幕寬度 60% */
-  height: 35vh;          /* 依需求可微調 */
-  background-color: #FFFFFF;
-  opacity: 0.9;
-  border-radius: 50%;    /* 產生橢圓形 */
+.ellipse {
+  width: 60vw;
+  height: 35vh;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 50%;
 }

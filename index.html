@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>封面</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>翻頁示範</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="cover-page">
+<body>
+  <div class="page" id="page">
+    <div class="side front"></div>
+    <div class="side back">
+      <div class="ellipse"></div>
+    </div>
+  </div>
+
   <script>
-    // 5 秒後跳到 page2.html
-    setTimeout(function() {
-      window.location.href = 'page2.html';
+    // 5 秒後加入 flipped class，觸發翻頁動畫
+    setTimeout(() => {
+      document.getElementById('page').classList.add('flipped');
     }, 5000);
   </script>
 </body>
