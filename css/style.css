@@ -63,7 +63,7 @@ html, body {
   box-sizing: border-box;
   text-align: left;          /* 文字置中 */
   line-height: 1.6;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
   /* 系統字 + Google Font */
   font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
