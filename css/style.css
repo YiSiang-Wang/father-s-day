@@ -27,6 +27,13 @@ html, body {
   backface-visibility: hidden;
   background-size: cover;
   background-position: center;
+}
+/* 封面圖 */
+.front {
+  background-image: url('../img/background.png');
+}
+/* 翻過來要看到的「第二面背景」 */
+.back {
   background-image: url('../img/background.png');
 }
 
@@ -47,7 +54,7 @@ html, body {
 /* 文字容器（取代原本的 ellipse-card） */
 .text-container {
   width: 60vw;               /* 變窄到佔螢幕寬度 60% */
-  max-width: 600px;
+  max-width: 60px;
   background: transparent;   /* 移除白色底 */
   padding: 1rem;
   box-sizing: border-box;
