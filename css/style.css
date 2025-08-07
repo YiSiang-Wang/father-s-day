@@ -54,7 +54,7 @@ html, body {
 /* 文字容器（取代原本的 ellipse-card） */
 .text-container {
   width: 60vw;               /* 變窄到佔螢幕寬度 60% */
-  max-width: 60px;
+  max-width: 300px;
   background: transparent;   /* 移除白色底 */
   padding: 1rem;
   box-sizing: border-box;
