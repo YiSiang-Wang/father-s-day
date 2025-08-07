@@ -37,7 +37,10 @@ html, body {
   background-image: url('../img/background.png');
 }
 
-/* 第二頁背景 + 置中（改成頂部對齊） */
+/* 載入 Google Font：Noto Sans TC（思源黑體）*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/* 第二頁背景 + 置中（改為頂部對齊） */
 .second-page {
   margin: 0;
   padding: 0;
@@ -46,23 +49,24 @@ html, body {
   background: url('../img/background.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* 改為頂部對齊 */
-  padding-top: 15vh;         /* 文字框起始高度下降 15% 視窗高度 */
+  align-items: flex-start;     /* 頂部對齊 */
+  padding-top: 25vh;           /* 文字起始高度下降 15% */
   overflow-y: auto;
 }
 
-/* 文字容器（取代原本的 ellipse-card） */
+/* 文字容器 */
 .text-container {
-  width: 60vw;               /* 變窄到佔螢幕寬度 60% */
+  width: 60vw;                 /* 佔螢幕寬度 60% */
   max-width: 600px;
-  background: transparent;   /* 移除白色底 */
+  background: transparent;     /* 透明背景 */
   padding: 1rem;
   box-sizing: border-box;
-  text-align: center;        /* 文字置中 */
+  text-align: center;          /* 文字置中 */
   line-height: 1.6;
   font-size: 1rem;
   color: #333;
-  font-family: sans-serif;
+  /* 系統字 + Google Font */
+  font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
   overflow-y: auto;
 }
 
