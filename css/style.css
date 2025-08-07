@@ -1,38 +1,20 @@
 /* css/style.css */
 
-/* 載入 Google 字體 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
+/* Off-white 背景 */
 html, body {
   margin: 0;
   height: 100vh;
-}
-
-body {
-  background-color: #000033;    /* 深藍背景 */
+  background-color: #F5F5DC;    /* 米白色 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card {
-  text-align: center;
-  width: 50vw;                   /* 佔螢幕寬度 40~50% */
-}
-
-.card h1 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 8rem;
-  color: #FFEB3B;                /* 較淺的金色 */
-  letter-spacing: 0.5rem;
-}
-
-.card h2 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  color: #FFEB3B;
-  letter-spacing: 0.2rem;
-  opacity: 0.9;
+/* 置中且寬度佔 60% */
+.cover {
+  display: block;
+  width: 60vw;                  /* 佔版面 60% */
+  max-width: 600px;             /* 防止過大，可自行調整 */
+  height: auto;
+  margin: auto;
 }
